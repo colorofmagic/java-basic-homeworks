@@ -5,16 +5,16 @@ public class MainApplication2 {
     public static void main(String[] args) {
         printString(3, "Hello World");
         sumElements(new int[] {3,4,5,6,7});
-        arrayNumbers(3, new int[6]);
+        fillArray(3, new int[6]);
         arrayIncreaseNumber(3, new int[] {1, 2, 3, 4});
         sumHalfArr(new int[] {3,12,6,4,5,5,6,7,9});
     }
 
-    public static void printString(int a, String String) {
-        int i = 0;
-        while (i < a) {
-            System.out.println(String);
-            i++;
+    public static void printString(int a, String string) {
+
+        for (int i = 0; i < a; i++) {
+            System.out.println(string);
+
         }
     }
 
@@ -22,13 +22,13 @@ public class MainApplication2 {
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > 5) {
-                sum = sum + arr[i];
+                sum += arr[i];
             }
         }
         System.out.println(sum);
     }
 
-    public static void arrayNumbers(int a, int arr[]) {
+    public static void fillArray(int a, int arr[]) {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = a;
         }
@@ -37,7 +37,7 @@ public class MainApplication2 {
 
     public static void arrayIncreaseNumber(int a, int arr[]) {
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = arr[i] + a;
+            arr[i] += a;
         }
         System.out.println(Arrays.toString(arr));
     }
