@@ -11,10 +11,8 @@ public class MainApplication2 {
     }
 
     public static void printString(int a, String string) {
-
         for (int i = 0; i < a; i++) {
             System.out.println(string);
-
         }
     }
 
