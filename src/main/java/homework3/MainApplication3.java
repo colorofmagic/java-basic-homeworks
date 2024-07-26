@@ -2,14 +2,12 @@ package homework3;
 
 public class MainApplication3 {
     public static void main(String[] args) {
-        int[][] array = {{5, -8, 6}, {8, -7, -8}, {16, -7, -8}};
+        int[][] array = {{5, -8, 6},{9, 7, 8}};
         //System.out.println(sumOfPositiveElements(array));
         printSquare(6);
-        /*
-        zeroDiagonal(array);
-        System.out.println(findMax(array));
-        System.out.println(sumSecond(array));
-        */
+        //zeroDiagonal(array);
+        //System.out.println(findMax(array));
+        //System.out.println(sumSecond(array));
     }
 
     public static int sumOfPositiveElements(int[][] array) {
@@ -24,16 +22,16 @@ public class MainApplication3 {
         return sum;
     }
 
+
     public static void printSquare(int size) {
-        String[][] array = new String[size][size];
         for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                array[i][j] = "*";
-                System.out.print(array[i][j] + " ");
+            int j = 0;
+            while (j < size) {
+                System.out.print("*");
+                j++;
             }
             System.out.println();
         }
-        System.out.println();
     }
 
     public static void zeroDiagonal(int[][] array) {
@@ -52,9 +50,7 @@ public class MainApplication3 {
         int max = array[0][0];
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
-                if (max > array[i][j]) {
-                    max = max;
-                } else {
+                if (array[i][j] > max) {
                     max = array[i][j];
                 }
             }
@@ -64,14 +60,17 @@ public class MainApplication3 {
 
 
     public static int sumSecond(int[][] array) {
-        int sum = 0;
-        if (array[1].length == 0) {
+<<<<<<<<< Temporary merge branch 1
+        if (array.length < 0) {
+=========
+        if (array.length < 2) {
+>>>>>>>>> Temporary merge branch 2
             return -1;
-        } else {
+        }
+        int sum = 0;
             for (int i = 0; i < array.length; i++) {
                 sum = sum + array[1][i];
             }
-        }
         return sum;
     }
 }
