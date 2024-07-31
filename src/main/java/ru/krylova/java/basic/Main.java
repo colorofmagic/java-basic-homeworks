@@ -26,7 +26,6 @@ public class Main {
                 }
             }
         Box box = new Box(3,6,4,"black",true, "something");
-            box.setColor("white");
             box.info();
             box.clear("something");
     }

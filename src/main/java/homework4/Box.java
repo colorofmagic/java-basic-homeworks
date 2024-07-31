@@ -36,12 +36,14 @@ public class Box {
     public void setColor(String color) {
         this.color = color;
     }
-
+    //Информация о коробке
     public void info() {
         System.out.println("Размеры коробки: " + height + "*" + width + "*" + depth);
         System.out.println("Цвет коробки:" + color);
     }
 
+
+    //Наполнение коробки
     public void fill(String str) {
         if (isOpen) {
             if (item == null) {
@@ -55,6 +57,8 @@ public class Box {
         }
     }
 
+
+    //Очистка коробки
     public void clear(String smth) {
         if (isOpen) {
             if (item == null) {
